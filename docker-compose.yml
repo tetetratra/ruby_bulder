@@ -1,0 +1,10 @@
+# docker compose run --rm ruby_builder bash
+version: "3.8"
+services:
+  ruby_builder:
+    build: .
+    volumes:
+      - ./ruby:/home/rubydev/workdir/ruby
+    working_dir: /home/rubydev/workdir
+    stdin_open: true
+    tty: true
