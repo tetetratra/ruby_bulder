@@ -19,3 +19,5 @@ RUN mkdir /home/rubydev && \
     useradd -g dev -G sudo -s /bin/bash rubydev && \
     echo 'rubydev:rubydev' | chpasswd && \
     chown rubydev /home/rubydev
+
+RUN apt install -y libyaml-dev
