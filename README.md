@@ -1,0 +1,5 @@
+- `koichisasada/rhc`はamdのみ
+  - M1 macでは動かない
+- `https://github.com/ko1/rubyhackchallenge/blob/master/docker/Dockerfile.bionic`からcloneして、自分でimageを作るべき
+  - Dockerfileがあるディレクトリで、`docker build -t rhc .`
+- `git submodule add --depth 1 git@github.com:tetetratra/ruby.git`
