@@ -10,6 +10,7 @@ RUN apt update && \
   apt install -y vim-tiny gdb && \
   apt install -y sudo && \
   DEBIAN_FRONTEND=noninteractive apt install -y tzdata
+RUN apt install -y libyaml-dev
 
 RUN rm -rf /var/lib/apt/lists/*
 
@@ -19,5 +20,3 @@ RUN mkdir /home/rubydev && \
     useradd -g dev -G sudo -s /bin/bash rubydev && \
     echo 'rubydev:rubydev' | chpasswd && \
     chown rubydev /home/rubydev
-
-RUN apt install -y libyaml-dev

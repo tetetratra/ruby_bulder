@@ -1,7 +1,7 @@
-# docker compose run --rm ruby_builder bash
+# docker compose run --rm rhc bash
 version: "3.8"
 services:
-  ruby_builder:
+  rhc:
     build: .
     volumes:
       - ./ruby:/home/rubydev/workdir/ruby
