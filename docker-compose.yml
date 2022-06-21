@@ -5,6 +5,13 @@ services:
     build: .
     volumes:
       - ./ruby:/home/rubydev/workdir/ruby
+      - ./src:/home/rubydev/workdir/src # テスト用のコードをホストから編集するためのvolume
+      - build-ruby:/home/rubydev/workdir/build
+      - install-ruby:/home/rubydev/workdir/install # インストールする先のディレクトリ
     working_dir: /home/rubydev/workdir
     stdin_open: true
     tty: true
+volumes:
+  build-ruby:
+  install-ruby:
+
